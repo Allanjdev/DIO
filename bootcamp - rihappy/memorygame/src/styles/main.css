@@ -1,0 +1,118 @@
+/* =============================
+   Estilização do Body
+   ============================= */
+body {
+  display: flex; /* Usar flexbox para centralizar conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Preenche toda a altura da tela */
+  background: #fc1e8a; /* Cor de fundo */
+  user-select: none; /* Impede seleção de texto */
+}
+
+/* =============================
+     Estilização do Container
+     ============================= */
+.container {
+  position: relative; /* Permite posicionamento de elementos filhos */
+  display: flex; /* Usar flexbox para alinhamento */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  justify-content: center; /* Centraliza conteúdo verticalmente */
+  align-items: center; /* Centraliza conteúdo horizontalmente */
+  gap: 30px; /* Espaçamento entre os elementos */
+  background: linear-gradient(
+    /* Gradiente de fundo */ 325deg,
+    #313134 0%,
+    #7303c0 30%,
+    #ec38bc 70%,
+    #fdeff9 100%
+  );
+  padding: 40px 60px; /* Espaçamento interno */
+}
+
+/* =============================
+     Estilização do Título (h2)
+     ============================= */
+h2 {
+  font-size: 3em; /* Tamanho da fonte */
+  color: #fff; /* Cor do texto */
+  text-transform: uppercase; /* Transforma texto em maiúsculas */
+  letter-spacing: 0.1em; /* Espaçamento entre letras */
+}
+
+/* =============================
+     Estilização do Botão Reset
+     ============================= */
+.reset {
+  padding: 15px 20px; /* Espaçamento interno do botão */
+  width: 100%; /* Largura total */
+  color: #000; /* Cor do texto */
+  background-color: #fff; /* Cor de fundo */
+  border: none; /* Remove borda padrão */
+  font-size: 1.5em; /* Tamanho da fonte */
+  letter-spacing: 0.1em; /* Espaçamento entre letras */
+  text-transform: uppercase; /* Transforma texto em maiúsculas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  font-weight: 600; /* Negrito */
+}
+
+/* Efeito de foco no botão */
+.reset:focus {
+  color: #ec38bc; /* Cor do texto ao focar */
+  background-color: #b673e2; /* Cor de fundo ao focar */
+}
+
+/* =============================
+     Estilização do Jogo
+     ============================= */
+.game {
+  width: 430px; /* Largura do container do jogo */
+  height: 430px; /* Altura do container do jogo */
+  display: flex; /* Usar flexbox para organizar itens */
+  flex-wrap: wrap; /* Permite que itens quebrem para a próxima linha */
+  gap: 10px; /* Espaçamento entre as cartas */
+  transform-style: preserve-3d; /* Preserva a 3D durante transformações */
+  perspective: 500px; /* Perspectiva para efeitos 3D */
+}
+
+/* =============================
+     Estilização dos Itens do Jogo
+     ============================= */
+.item {
+  position: relative; /* Permite posicionamento de elementos filhos */
+  width: 100px; /* Largura da carta */
+  height: 100px; /* Altura da carta */
+  display: flex; /* Usar flexbox para centralizar conteúdo */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  background-color: #fff; /* Cor de fundo */
+  font-size: 3em; /* Tamanho da fonte */
+  transform: rotateY(180deg); /* Inicia com a parte de trás visível */
+  transition: 0.25s; /* Transição suave ao girar */
+}
+
+/* Efeito da parte de trás da carta */
+.item::after {
+  content: ""; /* Necessário para criar o efeito */
+  position: absolute; /* Posiciona em relação ao item */
+  inset: 0; /* Preenche todo o espaço do item */
+  background: #404040; /* Cor de fundo da parte de trás */
+  transition: 0.25s; /* Transição suave ao girar */
+  transform: rotateY(0deg); /* Mantém a parte de trás em frente */
+  backface-visibility: hidden; /* Esconde a parte de trás quando girada */
+}
+
+/* =============================
+     Estilização das Cartas Abertas
+     ============================= */
+.item.boxOpen {
+  transform: rotateY(0deg); /* Gira a carta para mostrar a frente */
+}
+
+/* Efeito de combinação e abertura */
+.boxOpen::after,
+.boxMatch::after {
+  transform: rotateY(
+    180deg
+  ); /* Gira a parte de trás quando aberta ou combinada */
+}
