@@ -1,9 +1,9 @@
-Este repositório contém um código simples escrito em JavaScript que permite ao usuário inserir o seu nome e a quantidade de experiência de um herói, e com base na experiência informada, o herói é classificado em diferentes níveis.
+# Este repositório contém um código simples escrito em JavaScript que permite ao usuário inserir o seu nome e a quantidade de experiência de um herói, e com base na experiência informada, o herói é classificado em diferentes níveis.
 
-###Descrição do Projeto
+### Descrição do Projeto
 O sistema tem como objetivo simular um jogo de RPG onde o jogador (herói) pode ser classificado em diferentes níveis dependendo da experiência acumulada. Quando o usuário insere o nome e a quantidade de experiência, o sistema exibe uma mensagem de boas-vindas seguida pela classificação do herói.
 
-###Níveis de Heróis:
+### Níveis de Heróis:
 Ferro: 1000 pontos de experiência.
 Bronze: Entre 1001 e 2000 pontos de experiência.
 Prata: Entre 2001 e 5000 pontos de experiência.
@@ -13,7 +13,7 @@ Ascendente: Entre 8001 e 9000 pontos de experiência.
 Imortal: Entre 9001 e 10000 pontos de experiência.
 Radiante: 10001 ou mais pontos de experiência.
 
-##Como Usar
+## Como Usar
 
 Abrir o Código no Navegador:
 
