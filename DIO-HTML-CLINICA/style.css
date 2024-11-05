@@ -1,0 +1,92 @@
+/* Resetando margens e paddings padrões e ajustando o modelo de caixa para incluir bordas e paddings no cálculo da largura e altura */
+html,
+body {
+  margin: 0; /* Remove a margem padrão da página */
+  padding: 0; /* Remove o padding padrão do body */
+  box-sizing: border-box; /* Garante que padding e bordas sejam incluídos nas dimensões dos elementos */
+}
+
+/* Estilo geral para o body */
+body {
+  background-color: #f1f1f1; /* Define uma cor de fundo clara para o body */
+  display: flex; /* Usando flexbox para definir o layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente na tela */
+}
+
+/* Definindo o estilo para o contêiner principal .wrapper */
+.wrapper {
+  width: 1200px; /* Largura fixa para o contêiner */
+  display: flex; /* Define o layout como flexbox para disposição dos elementos dentro */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  background-color: aquamarine; /* Cor de fundo para o contêiner */
+}
+
+/* Estilo para a seção principal .main */
+.main {
+  display: flex; /* Usando flexbox para o layout da seção */
+  flex-flow: column; /* Organiza os filhos da main em uma coluna */
+  width: 85%; /* O tamanho da main ocupa 85% da largura do contêiner .wrapper */
+}
+
+/* Estilo para o menu lateral */
+.menu {
+  width: 15%; /* O menu ocupa 15% da largura total do contêiner */
+  background-color: aqua; /* Cor de fundo para o menu */
+  padding: 10px 20px 0px; /* Espaçamento interno no menu (10px em cima, 20px nas laterais e nenhum no fundo) */
+}
+
+/* Removendo o estilo de lista para os itens do menu */
+.menu ul li {
+  list-style: none; /* Remove os marcadores padrão das listas */
+}
+
+/* Estilo para os links do menu */
+.menu a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+/* Estilo para o cabeçalho .header */
+.header {
+  display: flex; /* Usando flexbox para a disposição dos itens no cabeçalho */
+  background-color: rgb(82, 123, 211); /* Cor de fundo para o cabeçalho */
+  min-height: 150px; /* Define a altura mínima do cabeçalho */
+  justify-content: flex-end; /* Alinha os itens à direita */
+  padding-right: 20px; /* Adiciona um espaço à direita do cabeçalho */
+}
+
+/* Estilo para a imagem do cabeçalho */
+.header img {
+  width: 100px; /* Largura fixa de 100px para a imagem */
+  height: 100px; /* Altura fixa de 100px para a imagem */
+}
+
+/* Estilo para a lista de navegação dentro do cabeçalho */
+.headerUl {
+  display: flex; /* Organiza os itens em linha com flexbox */
+  align-items: flex-end; /* Alinha os itens verticalmente ao fundo */
+  list-style: none; /* Remove os marcadores da lista */
+}
+
+/* Estilo para os links dentro da lista do cabeçalho */
+.headerUl li a {
+  padding: 10px; /* Adiciona 10px de padding em torno dos links */
+}
+
+/* Estilo para a seção de conteúdo */
+.content {
+  background-color: white; /* Cor de fundo branca para o conteúdo */
+  min-height: 300px; /* Define a altura mínima do conteúdo */
+  padding: 20px; /* Espaçamento interno de 20px ao redor do conteúdo */
+}
+
+/* Estilo para as imagens dentro da seção de conteúdo */
+.content img {
+  width: 100%; /* A imagem ocupa toda a largura da seção */
+  height: 100%; /* A imagem ocupa toda a altura da seção */
+}
+
+/* Estilo para o rodapé da página */
+.footer {
+  background-color: rgb(99, 56, 240); /* Cor de fundo para o rodapé */
+  min-height: 150px; /* Define a altura mínima do rodapé */
+}
